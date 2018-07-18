@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="content-type" content="text/html;charset=gb2312">
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <title>卡片效果</title>
+    <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"
+          rel="stylesheet">
+    <style type="text/css">
+.card {
+width: 260px;
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+text-align: left;
+margin-top: 20px;
+border-radius: 10px;
+position:relative;
+margin:auto;
+display:inline-block
+clear:both
+}
+.header {
+color: #fff;
+padding: 10px;
+font-size: 15px;
+height: 30px;
+}
+.body {
+margin-top: 15px;
+paddingLeft: 10px;
+paddingRight: 10px;
+}
+
+.body p {
+margin-left: 5px;
+}
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <div class="header" style="background-color: #5BD6B7; border-top-left-radius:10px; border-top-right-radius:10px">
+        <p>借阅详情</p>
+    </div>
+    <div class="body" style="background-color: #f9f9f9;">
+        <tr>
+            <td id="book_name"><span style="color:#333333">《书名书名》</span></td>
+            <td id="book_writer"><span style="color:#333333">著者：某某某</span></td>
+        </tr>
+        <hr/>
+    </div>
+    <div class="body">
+        <tr>
+            <td><span style="color:#6f6f6f">借出时间：</span></td>
+            <td id="begin_time"><span style="color:#5BD6B7">2018-7-11</span></td>
+        </tr>
+    </div>
+    <div class="body">
+        <tr>
+            <td><span style="color:#6f6f6f">应还时间：</span></td>
+            <td id="limit_time"><span style="color:#fe5135">2018-7-19</span></td>
+        </tr>
+    </div>
+    <div class="body">
+        <p id="name"><span style="color:#6f6f6f">姓名：某某某</span></p>
+        <p id="student_id"><span style="color:#6f6f6f">学号：123456</span></p>
+        <p id="card_id"><span style="color:#6f6f6f">证号：123456</span></p>
+    </div>
+</div>
+
+</body>
+
+</html>

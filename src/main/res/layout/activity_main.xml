@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.jeremylau.myapplication.activity.MainActivity">
 
-    <TextView
+    <Button
         android:layout_centerInParent="true"
         android:id="@+id/test_tv"
         android:layout_width="wrap_content"
@@ -14,7 +14,7 @@
         />
 
 
-    <TextView
+    <Button
         android:layout_marginTop="20dp"
         android:layout_below="@+id/test_tv"
         android:layout_centerInParent="true"
@@ -22,5 +22,26 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Launcher"
+        />
+
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/test_tv2"
+        android:layout_centerInParent="true"
+        android:id="@+id/test_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WebView"
+        />
+
+    <Button
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/test_tv3"
+        android:layout_centerInParent="true"
+        android:id="@+id/test_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test"
         />
 </RelativeLayout>
