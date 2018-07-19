@@ -29,7 +29,7 @@
         <activity android:name=".activity.H5Activity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
 
-        <activity android:name=".activity.TestActivity"
+        <activity android:name=".activity.ReadingH5Activity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
     </application>
 

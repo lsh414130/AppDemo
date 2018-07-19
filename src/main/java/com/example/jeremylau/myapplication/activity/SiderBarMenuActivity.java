@@ -3,6 +3,9 @@ package com.example.jeremylau.myapplication.activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.jeremylau.myapplication.R;
@@ -20,6 +23,14 @@ public class SiderBarMenuActivity extends AppCompatActivity {
     SiderBarMenu sbmSiderbarmenu;
     @BindView(R.id.tv_tips)
     TextView tvTips;
+    @BindView(R.id.back_image)
+    ImageView backImage;
+    @BindView(R.id.rl_back)
+    RelativeLayout rlBack;
+    @BindView(R.id.title)
+    TextView title;
+    @BindView(R.id.title_rl)
+    RelativeLayout titleRl;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,5 +38,11 @@ public class SiderBarMenuActivity extends AppCompatActivity {
         setContentView(R.layout.activity_siderbarmenu);
         ButterKnife.bind(this);
         sbmSiderbarmenu.setTextView(tvTips);
+        rlBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }

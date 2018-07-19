@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
 
 import com.example.jeremylau.myapplication.R;
 
@@ -23,29 +22,12 @@ public class MainActivity extends Activity {
     Button testTv3;
     @BindView(R.id.test_tv4)
     Button testTv4;
-//    private Handler handler = new Handler();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
-//        new Thread() {
-//            @Override
-//            public void run() {
-//                try {
-//                    Thread.sleep(1000);
-//                    handler.post(new Runnable() {
-//                        @Override
-//                        public void run() {
-//                            textView.setText("update thread");
-//                        }
-//                    });
-//                } catch (InterruptedException e) {
-//                    e.printStackTrace();
-//                }
-//            }
-//        }.start();
     }
 
     @OnClick({R.id.test_tv, R.id.test_tv2, R.id.test_tv3,R.id.test_tv4})
@@ -61,7 +43,7 @@ public class MainActivity extends Activity {
                 startActivity(new Intent(this, H5Activity.class));
                 break;
             case R.id.test_tv4:
-                startActivity(new Intent(this, TestActivity.class));
+                startActivity(new Intent(this, ReadingH5Activity.class));
                 break;
             default:
                 break;

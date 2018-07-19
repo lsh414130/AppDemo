@@ -1,47 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.example.jeremylau.myapplication.activity.MainActivity">
 
     <Button
-        android:layout_centerInParent="true"
         android:id="@+id/test_tv"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SiderBarMenu"
+        android:text="SiderBarMenu通讯录"
         />
 
 
     <Button
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/test_tv"
-        android:layout_centerInParent="true"
         android:id="@+id/test_tv2"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Launcher"
+        android:text="Launcher应用图标展示"
         />
 
 
     <Button
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/test_tv2"
-        android:layout_centerInParent="true"
         android:id="@+id/test_tv3"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="WebView"
+        android:text="Android js html交互"
         />
 
     <Button
-        android:layout_marginTop="20dp"
-        android:layout_below="@+id/test_tv3"
-        android:layout_centerInParent="true"
         android:id="@+id/test_tv4"
-        android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Test"
+        android:text="动态循环加载HTML"
         />
-</RelativeLayout>
+</LinearLayout>

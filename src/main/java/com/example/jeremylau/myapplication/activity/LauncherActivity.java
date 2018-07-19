@@ -8,10 +8,13 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AbsListView;
 import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.GridView;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.example.jeremylau.myapplication.R;
 
@@ -27,17 +30,29 @@ public class LauncherActivity extends Activity {
 
     @BindView(R.id.app_GridView)
     GridView mGrid;
+    @BindView(R.id.back_image)
+    ImageView backImage;
+    @BindView(R.id.rl_back)
+    RelativeLayout rlBack;
+    @BindView(R.id.title)
+    TextView title;
     private List<ResolveInfo> mApps;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN|View.SYSTEM_UI_FLAG_HIDE_NAVIGATION|View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+        getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
         loadApps();
         setContentView(R.layout.activity_launcher);
         ButterKnife.bind(this);
         mGrid.setAdapter(new AppsAdapter());
         mGrid.setOnItemClickListener(listener);
+        rlBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
     }
 
@@ -67,7 +82,6 @@ public class LauncherActivity extends Activity {
 
         mApps = getPackageManager().queryIntentActivities(mainIntent, 0);
     }
-
 
 
     public class AppsAdapter extends BaseAdapter {

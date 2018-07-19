@@ -26,8 +26,8 @@ import butterknife.ButterKnife;
 /**
  * Created by jeremylau on 2018/7/16.
  */
-public class TestActivity extends AppCompatActivity {
-    public static final String TAG = "TestActivity";
+public class ReadingH5Activity extends AppCompatActivity {
+    public static final String TAG = "ReadingH5Activity";
 
     @BindView(R.id.back_image)
     ImageView backImage;
