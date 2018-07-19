@@ -4,12 +4,12 @@
 <head>
     <meta http-equiv="content-type" content="text/html;charset=gb2312">
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
-    <title>卡片效果</title>
+    <title>借阅详情卡片效果</title>
     <link href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css"
           rel="stylesheet">
     <style type="text/css">
 .card {
-width: 260px;
+width: 360px;
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 text-align: left;
 margin-top: 20px;
@@ -21,23 +21,23 @@ clear:both
 }
 .header {
 color: #fff;
-padding: 10px;
-font-size: 15px;
+padding-left: 26px;
+padding-right: 10px;
+font-size: 20px;
 height: 30px;
 }
 .body {
 margin-top: 15px;
-paddingLeft: 10px;
-paddingRight: 10px;
+padding-left: 26px;
+padding-right: 10px;
 }
 
-.body p {
-margin-left: 5px;
+.body p{
+margin-top: 15px;
+margin-bottom:15px
+padding-left: 26px;
+padding-right: 10px;
 }
-
-
-
-
     </style>
 </head>
 
@@ -52,11 +52,11 @@ var noApplicationRecord = document.getElementById('reading_content')
 
 //绘制单个div
 function setDiv(item){
-    var div = '<div class="card"><div class="header" style="background-color: #5BD6B7; border-top-left-radius:10px; border-top-right-radius:10px"><p>借阅详情</p></div><div class="body" style="background-color: #f9f9f9;"><tr><td id="book_name"><span style="color:#333333">'
+    var div = '<div class="card"><div class="header" style="background-color: #5BD6B7; border-top-left-radius:10px; border-top-right-radius:10px"><p>借阅详情</p></div><div class="body"><tr><td id="book_name"><span style="color:#333333">'
         + item.book_name
         + '</span></td><td id="book_writer"><span style="color:#333333">'
         + item.book_writer
-        + '</span></td></tr><hr/></div><div class="body"><tr><td><span style="color:#6f6f6f">借出时间：</span></td><td id="begin_time"><span style="color:#5BD6B7">'
+        + '</span></td></tr></div><hr/><div class="body"><tr><td><span style="color:#6f6f6f">借出时间：</span></td><td id="begin_time"><span style="color:#5BD6B7">'
         + item.begin_time
         + '</span></td></tr></div><div class="body"><tr><td><span style="color:#6f6f6f">应还时间：</span></td><td id="limit_time"><span style="color:#fe5135">'
         + item.limit_time
@@ -66,7 +66,7 @@ function setDiv(item){
         + item.student_id
         + '</span></p><p id="card_id"><span style="color:#6f6f6f">'
         + item.card_id
-        + '</span></p></div></div>';
+        + '</span></p></div><br/></div><br/>';
     return div;
 }
 

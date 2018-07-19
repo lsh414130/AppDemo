@@ -27,4 +27,6 @@
     <color name="textcolor_content">#333333</color>
     <color name="color_progress">#3f000000</color>
     <color name="gray_white">#DDDDDD</color>
+
+    <color name="gray_background">#f9f9f9</color>
 </resources>
