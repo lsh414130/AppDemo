@@ -1,8 +1,6 @@
 package com.example.jeremylau.myapplication.activity;
 
 
-
-
 import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -38,6 +36,7 @@ public class ReadingH5Activity extends AppCompatActivity {
     @BindView(R.id.reading_WebView)
     WebView mWebView;
 
+    String bookData;
 
     @SuppressLint("JavascriptInterface")
     @Override
@@ -49,6 +48,10 @@ public class ReadingH5Activity extends AppCompatActivity {
     }
 
     private void initView() {
+        // TODO: 2018/7/20 模拟数据测试
+        bookData="[{ bookName: '书名书名1', author: '某某某1', loanedTime: '2017-07-12', returnTime: '2017-07-12', name: '姓名：某某某1', cardNo: '学号：123456', certificateNo: '证号：123456' },{ bookName: '《书名书名2》', author: '著者：某某某2', loanedTime: '2017-07-12', returnTime: '2017-07-12', name: '姓名：某某某2', cardNo: '学号：123456', certificateNo: '证号：123456' },{ bookName: '《书名书名3》', author: '著者：某某某3', loanedTime: '2017-07-12', returnTime: '2017-07-12', name: '姓名：某某某3', cardNo: '学号：123456', certificateNo: '证号：123456' }]";
+
+
         readingBack.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -85,7 +88,7 @@ public class ReadingH5Activity extends AppCompatActivity {
 
         @JavascriptInterface//一定要写，不然H5调不到这个方法
         public String book() {
-            return "[{ book_name: '《书名书名1》', book_writer: '著者：某某某1', begin_time: '2017-07-12', limit_time: '2017-07-12', name: '姓名：某某某1', student_id: '学号：123456', card_id: '证号：123456' },{ book_name: '《书名书名2》', book_writer: '著者：某某某2', begin_time: '2017-07-12', limit_time: '2017-07-12', name: '姓名：某某某2', student_id: '学号：123456', card_id: '证号：123456' },{ book_name: '《书名书名3》', book_writer: '著者：某某某3', begin_time: '2017-07-12', limit_time: '2017-07-12', name: '姓名：某某某3', student_id: '学号：123456', card_id: '证号：123456' }]";
+            return bookData;
         }
     }
 

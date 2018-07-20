@@ -14,14 +14,17 @@ import butterknife.OnClick;
 
 public class MainActivity extends Activity {
 
-    @BindView(R.id.test_tv)
-    Button testTv;
-    @BindView(R.id.test_tv2)
-    Button testTv2;
-    @BindView(R.id.test_tv3)
-    Button testTv3;
-    @BindView(R.id.test_tv4)
-    Button testTv4;
+
+    @BindView(R.id.test_bt)
+    Button testBt;
+    @BindView(R.id.test_bt2)
+    Button testBt2;
+    @BindView(R.id.test_bt3)
+    Button testBt3;
+    @BindView(R.id.test_bt4)
+    Button testBt4;
+    @BindView(R.id.test_bt5)
+    Button testBt5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,20 +33,23 @@ public class MainActivity extends Activity {
         ButterKnife.bind(this);
     }
 
-    @OnClick({R.id.test_tv, R.id.test_tv2, R.id.test_tv3,R.id.test_tv4})
+    @OnClick({R.id.test_bt, R.id.test_bt2, R.id.test_bt3, R.id.test_bt4,R.id.test_bt5})
     public void selectOnClick(View v) {
         switch (v.getId()) {
-            case R.id.test_tv:
+            case R.id.test_bt:
                 startActivity(new Intent(this, SiderBarMenuActivity.class));
                 break;
-            case R.id.test_tv2:
+            case R.id.test_bt2:
                 startActivity(new Intent(this, LauncherActivity.class));
                 break;
-            case R.id.test_tv3:
+            case R.id.test_bt3:
                 startActivity(new Intent(this, H5Activity.class));
                 break;
-            case R.id.test_tv4:
+            case R.id.test_bt4:
                 startActivity(new Intent(this, ReadingH5Activity.class));
+                break;
+            case R.id.test_bt5:
+                startActivity(new Intent(this, AddItemOrViewActivity.class));
                 break;
             default:
                 break;

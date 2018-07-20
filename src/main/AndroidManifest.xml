@@ -27,10 +27,17 @@
         </activity>
 
         <activity android:name=".activity.H5Activity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
 
         <activity android:name=".activity.ReadingH5Activity"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name=".activity.AddItemOrViewActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
     </application>
 
 

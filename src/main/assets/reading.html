@@ -52,20 +52,20 @@ var noApplicationRecord = document.getElementById('reading_content')
 
 //绘制单个div
 function setDiv(item){
-    var div = '<div class="card"><div class="header" style="background-color: #5BD6B7; border-top-left-radius:10px; border-top-right-radius:10px"><p>借阅详情</p></div><div class="body"><tr><td id="book_name"><span style="color:#333333">'
-        + item.book_name
-        + '</span></td><td id="book_writer"><span style="color:#333333">'
-        + item.book_writer
+    var div = '<div class="card"><div class="header" style="background-color: #5BD6B7; border-top-left-radius:10px; border-top-right-radius:10px"><p>借阅详情</p></div><div class="body"><tr><td id="book_name"><span style="color:#333333">《'
+        + item.bookName
+        + '》</span></td><td id="book_writer"><span style="color:#333333">&emsp;著者：'
+        + item.author
         + '</span></td></tr></div><hr/><div class="body"><tr><td><span style="color:#6f6f6f">借出时间：</span></td><td id="begin_time"><span style="color:#5BD6B7">'
-        + item.begin_time
+        + item.loanedTime
         + '</span></td></tr></div><div class="body"><tr><td><span style="color:#6f6f6f">应还时间：</span></td><td id="limit_time"><span style="color:#fe5135">'
-        + item.limit_time
-        + '</span></td></tr></div><div class="body"><p id="name"><span style="color:#6f6f6f">'
+        + item.returnTime
+        + '</span></td></tr></div><div class="body"><p id="name"><span style="color:#6f6f6f">姓名：'
         + item.name
-        + '</span></p><p id="student_id"><span style="color:#6f6f6f">'
-        + item.student_id
-        + '</span></p><p id="card_id"><span style="color:#6f6f6f">'
-        + item.card_id
+        + '</span></p><p id="student_id"><span style="color:#6f6f6f">学号：'
+        + item.cardNo
+        + '</span></p><p id="card_id"><span style="color:#6f6f6f">证号：'
+        + item.certificateNo
         + '</span></p></div><br/></div><br/>';
     return div;
 }

@@ -7,7 +7,7 @@
     tools:context="com.example.jeremylau.myapplication.activity.MainActivity">
 
     <Button
-        android:id="@+id/test_tv"
+        android:id="@+id/test_bt"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="SiderBarMenu通讯录"
@@ -15,7 +15,7 @@
 
 
     <Button
-        android:id="@+id/test_tv2"
+        android:id="@+id/test_bt2"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -24,7 +24,7 @@
 
 
     <Button
-        android:id="@+id/test_tv3"
+        android:id="@+id/test_bt3"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -32,10 +32,18 @@
         />
 
     <Button
-        android:id="@+id/test_tv4"
+        android:id="@+id/test_bt4"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="动态循环加载HTML"
+        />
+
+    <Button
+        android:id="@+id/test_bt5"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="动态添加view或item并获取数据"
         />
 </LinearLayout>
